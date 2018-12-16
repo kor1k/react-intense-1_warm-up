@@ -1,3 +1,7 @@
+ТАМ ОШИБКА!!!
+НЕ МОГУ НИКАК ПОНЯТЬ В ЧЁМ ПРОБЛЕМА, ТАК КАК ВСЁ НАПИСАНО 1:1 С КОДОМ С ЗАНЯТИЯ   
+ВОТ МОЙ ТГ @kor1k
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
