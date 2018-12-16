@@ -7,53 +7,53 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import styled from 'styled-components'
 
-const StyledCompCheck = styled.p`
-  font-family: Roboto, sans-serif;
-  color: orange;
-  font-size: 8rem;
-  text-align: center;
-  margin-top: 10rem;
+import Header from './components/Header'
+import Menu from './components/Menu'
+import Main from './components/Main'
+
+const url = process.env.PUBLIC_URL+'/img/background-image-1.png';
+
+const HeaderWrapper = styled.header`
+    width: 100%;
+    height: 49px;
+    background-color: #242424;
+    opacity: 0.8;
 `
 
-const StyledMainTitle = styled.p `
-   font-family: Roboto, sans-serif;
-   font-size: 12rem;
-   text-align: center;
-   margin-bottom: 10rem;
+const MenuWrapper = styled.div`
+    height: 89px;
+    padding-top: 21px;
+`
+
+const MainWrapper = styled.main`
+     height: 600px;
+     padding-top: 130px;
+     background: url(${url}) no-repeat;
+     background-size: cover; 
 `
 
 class App extends Component {
     render() {
         return (
-            <div className="wrapper container text-success">
-                <StyledMainTitle>Hello World! </StyledMainTitle>
-                <SayFullName name="Kostya" surname="Yelskiy"
-                             link="https://github.com/kor1k"/>
-                <SayFullName name="Olya" surname="Olga"
-                             link=""/>
-                <SayFullName
-                    name="Dasha" surname="Darina"
-                    link=""/>
-                <div className="test-block text-danger">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, eum?</h1>
-                    <h2>U devochek links are not valid. A u menya valid! |Progers vs. Girl| |1:0|</h2>
-                </div>
-                <StyledCompCheck>
-                    I like React.js.
-                </StyledCompCheck>
+            <div className="App">
+                <HeaderWrapper>
+                    <Grid>
+                        <Header/>
+                    </Grid>
+                </HeaderWrapper>
+                <MenuWrapper>
+                    <Grid>
+                        <Menu/>
+                    </Grid>
+                </MenuWrapper>
+                <MainWrapper>
+                    <Grid>
+                        <Main/>
+                    </Grid>
+                </MainWrapper>
             </div>
-
         );
     }
-}
-
-function SayFullName(props) {
-    return (
-        <div>
-            <h1>My name is {props.name}, surname - {props.surname}</h1>
-            <a href="{props.link}">Link on my profile.</a>
-        </div>
-    )
 }
 
 export default App;
