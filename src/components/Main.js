@@ -44,7 +44,7 @@ class Main extends React.Component {
     render() {
         return (
             <Row>
-                <Col lg={6}>
+                <Col lg={5}>
                     <Repair>
                         Качественный ремонт
                         <span>iPhone за 35 минут и гарантия 1 год</span>
